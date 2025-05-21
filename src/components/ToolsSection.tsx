@@ -1,5 +1,5 @@
 
-import { Figma, FileImage, Framer, Globe, Docker, N8n } from 'lucide-react';
+import { Figma, FileImage, Framer, Globe, Workflow, Laptop } from 'lucide-react';
 
 const tools = [
   {
@@ -24,17 +24,17 @@ const tools = [
   },
   {
     name: "Salesforce",
-    icon: N8n, // Using N8n as a stand-in for Salesforce since lucide doesn't have a specific Salesforce icon
+    icon: Globe, // Using Globe as a stand-in for Salesforce
     description: "CRM platform customization and development"
   },
   {
     name: "Docker",
-    icon: Docker,
+    icon: Laptop, // Using Laptop as a stand-in for Docker
     description: "Containerization for application development"
   },
   {
     name: "n8n",
-    icon: N8n,
+    icon: Workflow, // Using Workflow as a stand-in for n8n
     description: "Workflow automation tool for integrations"
   }
 ];

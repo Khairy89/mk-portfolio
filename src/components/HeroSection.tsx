@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   return (
@@ -15,12 +16,14 @@ const HeroSection = () => {
         {/* Image Container */}
         <div className="w-full md:w-2/5 flex justify-center md:justify-start order-2 md:order-1 mt-8 md:mt-0">
           <div className="relative">
-            {/* Placeholder for Khairy's image */}
+            {/* Khairy's profile image */}
             <div className="rounded-2xl bg-gradient-to-br from-dark to-muted p-1 shadow-xl">
               <div className="w-64 h-80 md:w-80 md:h-96 rounded-xl bg-muted overflow-hidden">
-                <div className="w-full h-full bg-muted flex items-center justify-center text-light/30">
-                  <span className="text-sm opacity-50">Khairy Fauzi's Photo</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/35615b55-ae83-4b0c-906f-81584f934797.png"
+                  alt="Khairy Fauzi"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full bg-teal/20 blur-2xl z-0"></div>
