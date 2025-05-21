@@ -15,11 +15,11 @@ const HeroSection = () => {
         {/* Image Container */}
         <div className="w-full md:w-2/5 flex justify-center md:justify-start order-2 md:order-1 mt-8 md:mt-0">
           <div className="relative">
-            {/* Placeholder for Alex's image */}
+            {/* Placeholder for Khairy's image */}
             <div className="rounded-2xl bg-gradient-to-br from-dark to-muted p-1 shadow-xl">
               <div className="w-64 h-80 md:w-80 md:h-96 rounded-xl bg-muted overflow-hidden">
                 <div className="w-full h-full bg-muted flex items-center justify-center text-light/30">
-                  <span className="text-sm opacity-50">Alex Morgan's Photo</span>
+                  <span className="text-sm opacity-50">Khairy Fauzi's Photo</span>
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@ const HeroSection = () => {
         <div className="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
           <span className="text-teal mb-2">UI/UX Designer</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Hi, I'm <span className="text-teal">Alex Morgan</span>
+            Hi, I'm <span className="text-teal">Khairy Fauzi</span>
           </h1>
           <p className="text-xl md:text-2xl text-light/80 mb-6 max-w-lg">
             A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.

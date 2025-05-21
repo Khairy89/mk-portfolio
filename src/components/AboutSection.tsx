@@ -12,7 +12,7 @@ const AboutSection = () => {
           {/* Content Side */}
           <div>
             <p className="text-lg mb-6 text-light/90">
-              I'm Alex Morgan, a passionate UI/UX designer dedicated to creating intuitive, engaging, and accessible digital experiences that solve real user problems.
+              I'm Khairy Fauzi, a passionate UI/UX designer dedicated to creating intuitive, engaging, and accessible digital experiences that solve real user problems.
             </p>
             
             <p className="mb-6 text-light/80">

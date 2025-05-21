@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
             <span className="text-2xl font-montserrat font-bold text-teal">
-              Alex<span className="text-light">.Morgan</span>
+              Khairy<span className="text-light">.Fauzi</span>
             </span>
             <p className="text-light/70 mt-2">UI/UX Designer</p>
           </div>
@@ -30,7 +30,7 @@ const Footer = () => {
         
         <div className="border-t border-muted/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-light/60 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Alex Morgan. All rights reserved.
+            © {new Date().getFullYear()} Khairy Fauzi. All rights reserved.
           </p>
           
           <div className="flex gap-6">

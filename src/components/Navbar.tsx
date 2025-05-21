@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -35,7 +34,7 @@ const Navbar = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-dark/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
         <a href="#hero" className="text-2xl font-montserrat font-bold text-teal">
-          Alex<span className="text-light">.Morgan</span>
+          Khairy<span className="text-light">.Fauzi</span>
         </a>
         
         {/* Desktop Navigation */}

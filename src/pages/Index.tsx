@@ -38,7 +38,7 @@ const Index = () => {
   
   // Update page title
   useEffect(() => {
-    document.title = 'Alex Morgan | UI/UX Designer';
+    document.title = 'Khairy Fauzi | UI/UX Designer';
   }, []);
   
   return (
