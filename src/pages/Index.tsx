@@ -38,7 +38,7 @@ const Index = () => {
   
   // Update page title
   useEffect(() => {
-    document.title = 'Khairy Fauzi | Technology Leader';
+    document.title = 'Khairy Fauzi | UI/UX Designer';
   }, []);
   
   return (

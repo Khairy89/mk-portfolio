@@ -18,47 +18,47 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Agri-Finance Platform",
-    category: "Fintech Application",
-    description: "A comprehensive platform connecting farmers with financial services and agricultural inputs",
-    longDescription: "Developed a fintech platform that enables small-scale farmers to access loans, purchase agricultural inputs, and manage their farming operations more efficiently.",
-    tools: ["React", "NodeJS", "PostgreSQL", "Docker"],
-    challenges: "Creating an intuitive interface accessible to users with varying levels of digital literacy while handling complex financial operations.",
-    solutions: "Implemented a simplified, icon-based interface with voice guidance options and streamlined workflows to reduce friction in the user journey.",
-    outcome: "Platform currently serves over 10,000 farmers with a 92% satisfaction rate and has facilitated more than $2M in agricultural financing."
+    title: "FinTrack Dashboard",
+    category: "Web Application",
+    description: "A financial tracking dashboard with intuitive data visualization",
+    longDescription: "FinTrack is a comprehensive financial dashboard designed to help users track expenses, investments, and savings goals all in one place.",
+    tools: ["Figma", "React", "D3.js"],
+    challenges: "Creating an intuitive interface that could display complex financial data without overwhelming users.",
+    solutions: "Implemented progressive disclosure patterns and customizable dashboard widgets to help users focus on their most relevant financial metrics.",
+    outcome: "User testing showed a 28% improvement in task completion rates compared to the previous version of the application."
   },
   {
     id: 2,
-    title: "School Management System",
-    category: "EdTech Solution",
-    description: "A comprehensive system for managing school operations, student records, and online learning",
-    longDescription: "Built an integrated school management system that digitized administrative processes, enabled virtual classrooms, and provided learning analytics.",
-    tools: ["Vue.js", "Laravel", "MySQL", "AWS"],
-    challenges: "Creating a system that could handle diverse school needs while being intuitive for non-technical staff and integrating with existing systems.",
-    solutions: "Implemented a modular architecture with role-based access controls and customizable workflows to adapt to different school structures.",
-    outcome: "The system reduced administrative time by 60% and improved parent engagement by 45% across multiple school branches."
+    title: "MediCare Mobile App",
+    category: "Mobile Design",
+    description: "A patient-centered healthcare appointment and medication tracking app",
+    longDescription: "MediCare is a mobile application designed to help patients manage healthcare appointments, medication schedules, and health records.",
+    tools: ["Figma", "Protopie", "Adobe Illustrator"],
+    challenges: "Designing for users with varying levels of technical proficiency and potential accessibility needs.",
+    solutions: "Created a highly accessible interface with clear information hierarchy and multiple input methods (touch, voice commands).",
+    outcome: "The app received a 4.8/5 rating on app stores with particular praise for its ease of use among elderly users."
   },
   {
     id: 3,
-    title: "E-commerce Platform",
-    category: "Web Application",
-    description: "A custom e-commerce solution with inventory management and payment processing",
-    longDescription: "Developed a scalable e-commerce platform with integrated inventory management, multi-payment gateway support, and customer analytics.",
-    tools: ["React", "Node.js", "MongoDB", "Redis"],
-    challenges: "Building a system that could handle peak traffic during promotions while maintaining inventory accuracy across multiple sales channels.",
-    solutions: "Implemented a microservices architecture with distributed caching and real-time inventory synchronization to ensure system reliability.",
-    outcome: "Platform processed over 100,000 transactions in its first year with 99.9% uptime during major sales events."
+    title: "EcoShop E-commerce",
+    category: "Web Design",
+    description: "An e-commerce platform focused on sustainable and eco-friendly products",
+    longDescription: "EcoShop is an e-commerce platform that connects consumers with sustainable and eco-friendly products from verified ethical manufacturers.",
+    tools: ["Adobe XD", "Framer", "Webflow"],
+    challenges: "Communicating product sustainability credentials without cluttering the shopping experience.",
+    solutions: "Designed an intuitive sustainability rating system with expandable details for interested shoppers.",
+    outcome: "The platform has seen a 40% higher conversion rate compared to industry averages for eco-product retailers."
   },
   {
     id: 4,
-    title: "Enterprise Resource Planning System",
-    category: "Business Software",
-    description: "A custom ERP solution for manufacturing businesses with production planning and quality control",
-    longDescription: "Created a comprehensive ERP system tailored for mid-sized manufacturing companies, integrating production, inventory, finance, and quality control modules.",
-    tools: ["Angular", "Java Spring", "PostgreSQL", "Kubernetes"],
-    challenges: "Designing a solution that could handle complex manufacturing processes while being flexible enough to adapt to different industry requirements.",
-    solutions: "Developed a configurable workflow engine that allowed businesses to define their unique processes without requiring custom code changes.",
-    outcome: "System implementation resulted in 35% reduction in production planning time and 25% decrease in inventory holding costs for clients."
+    title: "Workspaces Booking Platform",
+    category: "Web Application",
+    description: "A platform for booking co-working spaces and meeting rooms",
+    longDescription: "Workspaces is a platform that allows users to discover, compare, and book co-working spaces and meeting rooms across multiple locations.",
+    tools: ["Figma", "Adobe Photoshop", "Webflow"],
+    challenges: "Creating an intuitive booking system that could handle complex availability patterns and filtering options.",
+    solutions: "Implemented a visual calendar interface with interactive filters that update in real-time as users adjust their requirements.",
+    outcome: "The platform reduced booking abandonment rate by 35% compared to the client's previous solution."
   }
 ];
 

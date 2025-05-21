@@ -11,36 +11,36 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    title: "Head of Technology & Product",
-    company: "Swadaya Tech Indonesia",
-    period: "Aug 2023 - Present",
+    title: "Senior UI/UX Designer",
+    company: "Creative Tech Solutions",
+    period: "2023 - Present",
     description: [
-      "Lead the technology & product team in developing financial solutions for farmers",
-      "Built and managed cross-functional team in building end-to-end products",
-      "Designed and implemented agile product management processes",
-      "Established product roadmap and technology strategy for the organization"
+      "Lead designer for enterprise-level dashboard applications",
+      "Conducted user research and testing sessions with over 200 participants",
+      "Implemented design system that reduced design inconsistencies by 45%",
+      "Mentored junior designers and facilitated design thinking workshops"
     ]
   },
   {
-    title: "Co-Founder & CTO",
-    company: "Digitos.id",
-    period: "Oct 2019 - Present",
+    title: "UI/UX Designer",
+    company: "Digital Innovation Labs",
+    period: "2021 - 2023",
     description: [
-      "Founded and led a digital agency with focus on custom web applications",
-      "Built e-commerce platforms, ERP systems, and inventory management solutions",
-      "Guided business strategies that resulted in successful client acquisitions",
-      "Managed end-to-end product development and client relationships"
+      "Redesigned company's flagship product increasing user engagement by 32%",
+      "Created wireframes, prototypes, and high-fidelity mockups for mobile applications",
+      "Collaborated with product managers and developers throughout the design process",
+      "Conducted A/B testing to optimize key conversion points"
     ]
   },
   {
-    title: "Head of Software",
-    company: "OB Montessori",
-    period: "Sep 2021 - Aug 2023",
+    title: "Junior Designer",
+    company: "Web Solutions Inc.",
+    period: "2020 - 2021",
     description: [
-      "Led team in developing school management system and learning software",
-      "Implemented digital transformation strategies across the organization",
-      "Managed infrastructure and system architecture for educational software",
-      "Established project management methodologies and development workflows"
+      "Assisted in the design of responsive web interfaces for various clients",
+      "Created visual assets including icons, illustrations, and marketing materials",
+      "Participated in brainstorming sessions and concept development",
+      "Gained practical experience with design systems and component libraries"
     ]
   }
 ];
