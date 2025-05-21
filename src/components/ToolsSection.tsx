@@ -1,5 +1,5 @@
 
-import { Figma, FileImage, Framer, Webflow } from 'lucide-react';
+import { Figma, FileImage, Framer, Globe } from 'lucide-react';
 
 const tools = [
   {
@@ -19,7 +19,7 @@ const tools = [
   },
   {
     name: "Webflow",
-    icon: Webflow,
+    icon: Globe,
     description: "Website building and responsive design"
   }
 ];
