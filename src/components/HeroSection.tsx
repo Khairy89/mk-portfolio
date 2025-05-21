@@ -32,12 +32,12 @@ const HeroSection = () => {
         
         {/* Content */}
         <div className="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
-          <span className="text-teal mb-2">UI/UX Designer</span>
+          <span className="text-teal mb-2">Technology Leader & Developer</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Hi, I'm <span className="text-teal">Khairy Fauzi</span>
           </h1>
           <p className="text-xl md:text-2xl text-light/80 mb-6 max-w-lg">
-            A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
+            A seasoned technology leader with 7+ years of experience building digital products and leading development teams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-teal hover:bg-teal/90 text-black font-medium">
