@@ -77,7 +77,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Connect On LinkedIn</h3>
-                  <a href="#" className="text-teal hover:underline">linkedin.com/in/alexmorgan</a>
+                  <a href="https://www.linkedin.com/in/khairifauzi/" className="text-teal hover:underline">linkedin.com/in/khairifauzi</a>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ const ContactSection = () => {
             <div className="mt-12">
               <h3 className="text-xl font-bold mb-4">Find Me On</h3>
               <div className="flex gap-4">
-                <a href="#" className="bg-muted w-10 h-10 rounded-full flex items-center justify-center hover:bg-teal/20 transition-colors">
+                <a href="https://www.linkedin.com/in/khairifauzi/" className="bg-muted w-10 h-10 rounded-full flex items-center justify-center hover:bg-teal/20 transition-colors">
                   <span className="sr-only">LinkedIn</span>
                   <Linkedin size={18} />
                 </a>
