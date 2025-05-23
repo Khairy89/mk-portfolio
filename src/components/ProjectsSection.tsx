@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, FileText, X } from 'lucide-react';
@@ -93,25 +92,10 @@ const ProjectsSection = () => {
                   <span className="text-sm opacity-50">{project.title} Preview</span>
                 </div>
                 
-                {/* Overlay on hover */}
+                {/* Overlay on hover - removed duplicate buttons */}
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-dark/30 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
                   <h3 className="text-xl font-bold">{project.title}</h3>
-                  <p className="text-light/70 text-sm mb-4">{project.category}</p>
-                  <div className="flex gap-3">
-                    <Button size="sm" className="bg-teal hover:bg-teal/90 text-black">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View Details
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="border-teal text-teal hover:bg-teal/10"
-                      onClick={() => openCaseStudy(project)}
-                    >
-                      <FileText className="h-4 w-4 mr-2" />
-                      Case Study
-                    </Button>
-                  </div>
+                  <p className="text-light/70 text-sm">{project.category}</p>
                 </div>
               </div>
               
