@@ -57,7 +57,7 @@ const ProjectsSection = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'auto';
   };
-  return <section id="projects" className="bg-dark py-20">
+  return <section id="projects" className="bg-dark py-0">
       <div className="section-padding">
         {/* Header */}
         <div className="text-center mb-16">

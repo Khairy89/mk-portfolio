@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 const AboutSection = () => {
-  return <section id="about" className="bg-dark py-20">
+  return <section id="about" className="bg-dark py-0">
       <div className="section-padding">
         <h2 className="section-title">About Me</h2>
         
