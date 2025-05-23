@@ -1,8 +1,6 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, FileText, X } from 'lucide-react';
-
 type Project = {
   id: number;
   title: string;
@@ -15,61 +13,51 @@ type Project = {
   solutions?: string;
   outcome?: string;
 };
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Salesforce Data Integration Pipeline",
-    category: "CRM Automation",
-    description: "Automated data synchronization between Salesforce and external systems using n8n workflows",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    longDescription: "A comprehensive automation solution that synchronizes customer data between Salesforce CRM and multiple external platforms, ensuring real-time data consistency across all business systems.",
-    tools: ["Salesforce", "n8n", "Docker", "REST APIs"],
-    challenges: "Managing real-time data synchronization across multiple platforms while handling API rate limits and ensuring data integrity.",
-    solutions: "Implemented intelligent retry mechanisms, batch processing, and error handling workflows with automatic rollback capabilities.",
-    outcome: "Reduced manual data entry by 85% and improved data accuracy to 99.7% across all integrated systems."
-  },
-  {
-    id: 2,
-    title: "Multi-Platform Workflow Orchestration",
-    category: "Process Automation",
-    description: "Created complex automated workflows connecting 15+ business applications using n8n",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    longDescription: "Designed and implemented sophisticated automation workflows that connect various business applications including CRM, ERP, marketing tools, and communication platforms.",
-    tools: ["n8n", "Docker", "Webhooks", "API Integration"],
-    challenges: "Orchestrating complex business processes across disparate systems with different data formats and authentication methods.",
-    solutions: "Built modular workflow components with standardized data transformation layers and centralized error monitoring.",
-    outcome: "Achieved 70% reduction in manual tasks and improved process completion time by 60% across departments."
-  },
-  {
-    id: 3,
-    title: "Containerized Development Environment",
-    category: "DevOps Automation",
-    description: "Streamlined development workflows using Docker containerization and automation",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    longDescription: "Implemented a fully containerized development environment that automates setup, testing, and deployment processes for development teams.",
-    tools: ["Docker", "Docker Compose", "CI/CD", "Git"],
-    challenges: "Standardizing development environments across team members while maintaining flexibility for different project requirements.",
-    solutions: "Created custom Docker images with automated environment provisioning and one-command deployment scripts.",
-    outcome: "Reduced onboarding time for new developers from 2 days to 30 minutes and eliminated environment-related bugs."
-  }
-];
-
+const projects: Project[] = [{
+  id: 1,
+  title: "Salesforce Data Integration Pipeline",
+  category: "CRM Automation",
+  description: "Automated data synchronization between Salesforce and external systems using n8n workflows",
+  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  longDescription: "A comprehensive automation solution that synchronizes customer data between Salesforce CRM and multiple external platforms, ensuring real-time data consistency across all business systems.",
+  tools: ["Salesforce", "n8n", "Docker", "REST APIs"],
+  challenges: "Managing real-time data synchronization across multiple platforms while handling API rate limits and ensuring data integrity.",
+  solutions: "Implemented intelligent retry mechanisms, batch processing, and error handling workflows with automatic rollback capabilities.",
+  outcome: "Reduced manual data entry by 85% and improved data accuracy to 99.7% across all integrated systems."
+}, {
+  id: 2,
+  title: "Multi-Platform Workflow Orchestration",
+  category: "Process Automation",
+  description: "Created complex automated workflows connecting 15+ business applications using n8n",
+  image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  longDescription: "Designed and implemented sophisticated automation workflows that connect various business applications including CRM, ERP, marketing tools, and communication platforms.",
+  tools: ["n8n", "Docker", "Webhooks", "API Integration"],
+  challenges: "Orchestrating complex business processes across disparate systems with different data formats and authentication methods.",
+  solutions: "Built modular workflow components with standardized data transformation layers and centralized error monitoring.",
+  outcome: "Achieved 70% reduction in manual tasks and improved process completion time by 60% across departments."
+}, {
+  id: 3,
+  title: "Containerized Development Environment",
+  category: "DevOps Automation",
+  description: "Streamlined development workflows using Docker containerization and automation",
+  image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  longDescription: "Implemented a fully containerized development environment that automates setup, testing, and deployment processes for development teams.",
+  tools: ["Docker", "Docker Compose", "CI/CD", "Git"],
+  challenges: "Standardizing development environments across team members while maintaining flexibility for different project requirements.",
+  solutions: "Created custom Docker images with automated environment provisioning and one-command deployment scripts.",
+  outcome: "Reduced onboarding time for new developers from 2 days to 30 minutes and eliminated environment-related bugs."
+}];
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  
   const openCaseStudy = (project: Project) => {
     setSelectedProject(project);
     document.body.style.overflow = 'hidden';
   };
-  
   const closeCaseStudy = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'auto';
   };
-
-  return (
-    <section id="projects" className="bg-dark py-20">
+  return <section id="projects" className="bg-dark py-20">
       <div className="section-padding">
         {/* Header */}
         <div className="text-center mb-16">
@@ -81,19 +69,10 @@ const ProjectsSection = () => {
         
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div 
-              key={project.id}
-              className="group relative bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-teal/20"
-              onClick={() => openCaseStudy(project)}
-            >
+          {projects.map(project => <div key={project.id} className="group relative bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-teal/20" onClick={() => openCaseStudy(project)}>
               {/* Project Image */}
               <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
@@ -111,8 +90,7 @@ const ProjectsSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
         
         {/* Action Buttons */}
@@ -124,27 +102,17 @@ const ProjectsSection = () => {
       </div>
       
       {/* Case Study Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {selectedProject && <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeCaseStudy}></div>
           
           <div className="relative bg-card rounded-xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
-            <Button 
-              variant="ghost" 
-              size="icon"
-              className="absolute top-4 right-4 text-light hover:text-teal hover:bg-muted z-10"
-              onClick={closeCaseStudy}
-            >
+            <Button variant="ghost" size="icon" className="absolute top-4 right-4 text-light hover:text-teal hover:bg-muted z-10" onClick={closeCaseStudy}>
               <X size={20} />
             </Button>
             
             {/* Modal Header Image */}
             <div className="relative h-64 overflow-hidden rounded-t-xl">
-              <img 
-                src={selectedProject.image} 
-                alt={selectedProject.title}
-                className="w-full h-full object-cover"
-              />
+              <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent">
                 <div className="absolute bottom-6 left-6">
                   <span className="text-teal text-sm">{selectedProject.category}</span>
@@ -160,18 +128,14 @@ const ProjectsSection = () => {
                   <p className="text-light/80">{selectedProject.longDescription}</p>
                 </div>
                 
-                {selectedProject.tools && (
-                  <div>
+                {selectedProject.tools && <div>
                     <h3 className="text-xl font-semibold mb-2">Technologies Used</h3>
                     <div className="flex flex-wrap gap-2">
-                      {selectedProject.tools.map((tool, index) => (
-                        <span key={index} className="px-3 py-1 bg-muted rounded-full text-sm">
+                      {selectedProject.tools.map((tool, index) => <span key={index} className="px-3 py-1 bg-muted rounded-full text-sm">
                           {tool}
-                        </span>
-                      ))}
+                        </span>)}
                     </div>
-                  </div>
-                )}
+                  </div>}
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-muted/50 p-5 rounded-lg">
@@ -199,10 +163,7 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
-        </div>
-      )}
-    </section>
-  );
+        </div>}
+    </section>;
 };
-
 export default ProjectsSection;
