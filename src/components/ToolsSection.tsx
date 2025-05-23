@@ -1,31 +1,20 @@
-
-import { Figma, FileImage, Framer, Globe, Workflow, Laptop } from 'lucide-react';
+import { Figma, FileImage, Framer, Globe, Workflow, Laptop, Code } from 'lucide-react';
 
 const tools = [
-  {
-    name: "Figma",
-    icon: Figma,
-    description: "Primary design tool for UI/UX"
-  },
-  {
-    name: "Framer",
-    icon: Framer,
-    description: "Interactive prototyping and animations"
-  },
-  {
-    name: "Adobe Photoshop",
-    icon: FileImage,
-    description: "Image editing and graphic design"
-  },
-  {
-    name: "Webflow",
-    icon: Globe,
-    description: "Website building and responsive design"
-  },
   {
     name: "Salesforce",
     icon: Globe,
     description: "CRM platform customization and development"
+  },
+  {
+    name: "Python",
+    icon: Code,
+    description: "Programming language for automation and data processing"
+  },
+  {
+    name: "n8n",
+    icon: Workflow,
+    description: "Workflow automation tool for integrations"
   },
   {
     name: "Docker",
@@ -33,9 +22,14 @@ const tools = [
     description: "Containerization for application development"
   },
   {
-    name: "n8n",
+    name: "Airflow",
     icon: Workflow,
-    description: "Workflow automation tool for integrations"
+    description: "Platform for workflow orchestration and scheduling"
+  },
+  {
+    name: "Figma",
+    icon: Figma,
+    description: "Primary design tool for UI/UX"
   }
 ];
 
