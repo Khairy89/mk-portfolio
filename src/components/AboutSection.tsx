@@ -1,17 +1,14 @@
-
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="bg-dark py-20">
+  return <section id="about" className="bg-dark py-20">
       <div className="section-padding">
         <h2 className="section-title">About Me</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
           {/* Content Side */}
           <div>
-            <p className="text-lg mb-6 text-light/90">
+            <p className="mb-6 text-light/90 text-base">
               I'm Khairy Fauzi, a passionate UI/UX designer dedicated to creating intuitive, engaging, and accessible digital experiences that solve real user problems.
             </p>
             
@@ -57,25 +54,23 @@ const AboutSection = () => {
             
             {/* Education */}
             <div className="bg-card p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Education</h3>
+              <h3 className="text-xl font-bold mb-4">Certification</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold">Bachelor of Design</h4>
-                  <p className="text-teal">Design University</p>
-                  <p className="text-sm text-light/70">2016 - 2020</p>
+                  <h4 className="font-semibold">Certified Artificial Intelligence Practitioner</h4>
+                  <p className="text-teal">CertNexus</p>
+                  <p className="text-sm text-light/70">ID : 2022003911</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold">UI/UX Certification</h4>
-                  <p className="text-teal">Design Academy</p>
-                  <p className="text-sm text-light/70">2019</p>
+                  <h4 className="font-semibold">Certified Data Science Practitioner</h4>
+                  <p className="text-teal">CertNexus</p>
+                  <p className="text-sm text-light/70">ID : 2022003911</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
