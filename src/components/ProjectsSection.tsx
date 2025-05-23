@@ -18,47 +18,47 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "FinTrack Dashboard",
-    category: "Web Application",
-    description: "A financial tracking dashboard with intuitive data visualization",
-    longDescription: "FinTrack is a comprehensive financial dashboard designed to help users track expenses, investments, and savings goals all in one place.",
-    tools: ["Figma", "React", "D3.js"],
-    challenges: "Creating an intuitive interface that could display complex financial data without overwhelming users.",
-    solutions: "Implemented progressive disclosure patterns and customizable dashboard widgets to help users focus on their most relevant financial metrics.",
-    outcome: "User testing showed a 28% improvement in task completion rates compared to the previous version of the application."
+    title: "Salesforce Data Integration Pipeline",
+    category: "CRM Automation",
+    description: "Automated data synchronization between Salesforce and external systems using n8n workflows",
+    longDescription: "A comprehensive automation solution that synchronizes customer data between Salesforce CRM and multiple external platforms, ensuring real-time data consistency across all business systems.",
+    tools: ["Salesforce", "n8n", "Docker", "REST APIs"],
+    challenges: "Managing real-time data synchronization across multiple platforms while handling API rate limits and ensuring data integrity.",
+    solutions: "Implemented intelligent retry mechanisms, batch processing, and error handling workflows with automatic rollback capabilities.",
+    outcome: "Reduced manual data entry by 85% and improved data accuracy to 99.7% across all integrated systems."
   },
   {
     id: 2,
-    title: "MediCare Mobile App",
-    category: "Mobile Design",
-    description: "A patient-centered healthcare appointment and medication tracking app",
-    longDescription: "MediCare is a mobile application designed to help patients manage healthcare appointments, medication schedules, and health records.",
-    tools: ["Figma", "Protopie", "Adobe Illustrator"],
-    challenges: "Designing for users with varying levels of technical proficiency and potential accessibility needs.",
-    solutions: "Created a highly accessible interface with clear information hierarchy and multiple input methods (touch, voice commands).",
-    outcome: "The app received a 4.8/5 rating on app stores with particular praise for its ease of use among elderly users."
+    title: "Multi-Platform Workflow Orchestration",
+    category: "Process Automation",
+    description: "Created complex automated workflows connecting 15+ business applications using n8n",
+    longDescription: "Designed and implemented sophisticated automation workflows that connect various business applications including CRM, ERP, marketing tools, and communication platforms.",
+    tools: ["n8n", "Docker", "Webhooks", "API Integration"],
+    challenges: "Orchestrating complex business processes across disparate systems with different data formats and authentication methods.",
+    solutions: "Built modular workflow components with standardized data transformation layers and centralized error monitoring.",
+    outcome: "Achieved 70% reduction in manual tasks and improved process completion time by 60% across departments."
   },
   {
     id: 3,
-    title: "EcoShop E-commerce",
-    category: "Web Design",
-    description: "An e-commerce platform focused on sustainable and eco-friendly products",
-    longDescription: "EcoShop is an e-commerce platform that connects consumers with sustainable and eco-friendly products from verified ethical manufacturers.",
-    tools: ["Adobe XD", "Framer", "Webflow"],
-    challenges: "Communicating product sustainability credentials without cluttering the shopping experience.",
-    solutions: "Designed an intuitive sustainability rating system with expandable details for interested shoppers.",
-    outcome: "The platform has seen a 40% higher conversion rate compared to industry averages for eco-product retailers."
+    title: "Containerized Development Environment",
+    category: "DevOps Automation",
+    description: "Streamlined development workflows using Docker containerization and automation",
+    longDescription: "Implemented a fully containerized development environment that automates setup, testing, and deployment processes for development teams.",
+    tools: ["Docker", "Docker Compose", "CI/CD", "Git"],
+    challenges: "Standardizing development environments across team members while maintaining flexibility for different project requirements.",
+    solutions: "Created custom Docker images with automated environment provisioning and one-command deployment scripts.",
+    outcome: "Reduced onboarding time for new developers from 2 days to 30 minutes and eliminated environment-related bugs."
   },
   {
     id: 4,
-    title: "Workspaces Booking Platform",
-    category: "Web Application",
-    description: "A platform for booking co-working spaces and meeting rooms",
-    longDescription: "Workspaces is a platform that allows users to discover, compare, and book co-working spaces and meeting rooms across multiple locations.",
-    tools: ["Figma", "Adobe Photoshop", "Webflow"],
-    challenges: "Creating an intuitive booking system that could handle complex availability patterns and filtering options.",
-    solutions: "Implemented a visual calendar interface with interactive filters that update in real-time as users adjust their requirements.",
-    outcome: "The platform reduced booking abandonment rate by 35% compared to the client's previous solution."
+    title: "Customer Service Automation Hub",
+    category: "Customer Experience",
+    description: "Automated customer support workflows integrating ticketing, CRM, and communication systems",
+    longDescription: "Built an intelligent automation hub that handles customer inquiries, routes tickets, updates CRM records, and triggers follow-up communications automatically.",
+    tools: ["Salesforce Service Cloud", "n8n", "Email APIs", "Chatbot Integration"],
+    challenges: "Creating intelligent routing logic that could handle complex customer scenarios while maintaining personal touch.",
+    solutions: "Developed rule-based automation with escalation paths and integrated AI-powered sentiment analysis for priority routing.",
+    outcome: "Improved first response time by 75% and increased customer satisfaction scores by 40% while reducing support team workload."
   }
 ];
 
@@ -78,7 +78,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="bg-dark py-20">
       <div className="section-padding">
-        <h2 className="section-title">Design Projects</h2>
+        <h2 className="section-title">Automation Projects</h2>
         
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
                   <div className="flex gap-3">
                     <Button size="sm" className="bg-teal hover:bg-teal/90 text-black">
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
+                      View Details
                     </Button>
                     <Button 
                       size="sm" 
@@ -125,7 +125,7 @@ const ProjectsSection = () => {
                 <div className="flex gap-3">
                   <Button size="sm" className="bg-teal hover:bg-teal/90 text-black">
                     <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
+                    View Details
                   </Button>
                   <Button 
                     size="sm" 
@@ -170,7 +170,7 @@ const ProjectsSection = () => {
                 
                 {selectedProject.tools && (
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Tools Used</h3>
+                    <h3 className="text-xl font-semibold mb-2">Technologies Used</h3>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.tools.map((tool, index) => (
                         <span key={index} className="px-3 py-1 bg-muted rounded-full text-sm">
@@ -193,7 +193,7 @@ const ProjectsSection = () => {
                   </div>
                   
                   <div className="bg-muted/50 p-5 rounded-lg">
-                    <h3 className="font-semibold mb-2 text-teal">Outcome</h3>
+                    <h3 className="font-semibold mb-2 text-teal">Results</h3>
                     <p className="text-light/80 text-sm">{selectedProject.outcome}</p>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ const ProjectsSection = () => {
                 <div className="mt-8">
                   <Button className="bg-teal hover:bg-teal/90 text-black">
                     <ExternalLink className="h-4 w-4 mr-2" />
-                    View Live Project
+                    View Project Details
                   </Button>
                 </div>
               </div>
