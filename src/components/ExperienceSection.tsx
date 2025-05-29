@@ -37,24 +37,24 @@ const ExperienceSection = () => {
         <h2 className="section-title text-center">My Service</h2>
         
         <div className="mt-16 relative max-w-6xl mx-auto">
-          {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-muted md:transform md:-translate-x-1/2"></div>
+          {/* Timeline Line - Hidden on mobile for cleaner look */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-muted transform -translate-x-1/2"></div>
           
           {/* Service Items */}
           {services.map((service, index) => (
             <Fragment key={index}>
-              <div className={`flex flex-col md:flex-row items-start md:items-center gap-6 mb-12 relative ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                {/* Timeline Node */}
-                <div className="absolute left-4 md:left-1/2 top-6 w-4 h-4 rounded-full bg-teal transform -translate-x-1/2 z-10 border-4 border-[#141414]"></div>
+              <div className={`flex flex-col md:flex-row items-start md:items-center gap-6 mb-8 md:mb-12 relative ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                {/* Timeline Node - Hidden on mobile */}
+                <div className="hidden md:block absolute left-1/2 top-6 w-4 h-4 rounded-full bg-teal transform -translate-x-1/2 z-10 border-4 border-[#141414]"></div>
                 
                 {/* Content */}
-                <div className={`w-full md:w-5/12 bg-card p-6 rounded-lg shadow-lg ml-12 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'}`}>
+                <div className={`w-full md:w-5/12 bg-card p-4 md:p-6 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'}`}>
                   <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
                     <Briefcase size={18} className="text-teal" />
-                    <h3 className="text-xl font-bold">{service.title}</h3>
+                    <h3 className="text-lg md:text-xl font-bold">{service.title}</h3>
                   </div>
-                  <p className="text-teal mb-4 font-medium">{service.category}</p>
-                  <ul className={`space-y-2 text-light/80 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  <p className="text-teal mb-3 md:mb-4 font-medium text-sm md:text-base">{service.category}</p>
+                  <ul className={`space-y-2 text-light/80 text-sm md:text-base ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     {service.description.map((item, i) => (
                       <li key={i} className={`flex items-start gap-2 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                         <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-2 flex-shrink-0"></span>
