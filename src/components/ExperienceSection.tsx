@@ -50,7 +50,7 @@ const ExperienceSection = () => {
                   <p className="text-teal mb-3 md:mb-4 font-medium text-sm md:text-base">{service.category}</p>
                   <ul className={`space-y-2 text-light/80 text-sm md:text-base ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     {service.description.map((item, i) => <li key={i} className={`flex items-start gap-2 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-2 flex-shrink-0"></span>
+                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-2 flex-shrink-0 text-base text-left"></span>
                         <span className="leading-relaxed">{item}</span>
                       </li>)}
                   </ul>
