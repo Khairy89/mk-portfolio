@@ -1,38 +1,32 @@
 
 import { Fragment } from 'react';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 
 type Service = {
   title: string;
   category: string;
-  period: string;
   description: string[];
 };
 
 const services: Service[] = [{
   title: "Automation Workflow Engineering",
   category: "Process Automation",
-  period: "Ongoing Service",
   description: ["Engineered automation workflows with n8n for clients, integrating services like Google APIs, CRMs, and custom logic to reduce manual effort and boost efficiency", "Custom workflow design and implementation", "API integrations and data synchronization", "Process optimization and monitoring"]
 }, {
   title: "AI-Driven Content Creation",
   category: "Creative Solutions",
-  period: "Ongoing Service",
   description: ["Delivered AI-driven content projects including logo generation, video creation, and image synthesis—enabling businesses to scale creative output rapidly", "Custom AI model implementation", "Brand identity and visual content generation", "Automated content production pipelines"]
 }, {
   title: "Custom UI/UX Development",
   category: "Web Development",
-  period: "Ongoing Service",
   description: ["Designed and deployed custom UI/UX websites using modern design systems, ensuring responsive layouts and seamless user experiences", "Modern design system implementation", "Responsive web development", "User experience optimization"]
 }, {
   title: "Low-Code Solutions Implementation",
   category: "Digital Solutions",
-  period: "Ongoing Service",
   description: ["Helped startups and SMEs implement cost-effective low-code solutions, significantly reducing time-to-market for digital services", "Rapid prototyping and development", "Cost-effective solution architecture", "Time-to-market optimization"]
 }, {
   title: "Digital Transformation Consultation",
   category: "Strategic Consulting",
-  period: "Ongoing Service",
   description: ["Provided consultation on digital transformation strategies, aligning technical implementation with business goals", "Strategic planning and roadmap development", "Technology assessment and recommendations", "Business-technical alignment consulting"]
 }];
 
@@ -51,21 +45,13 @@ const ExperienceSection = () => {
                 {/* Timeline Node */}
                 <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 rounded-full bg-teal transform -translate-x-1/2 z-10"></div>
                 
-                {/* Category */}
-                <div className={`w-full md:w-1/2 flex ${index % 2 === 0 ? 'md:justify-start md:pl-8' : 'md:justify-end md:pr-8'} mb-4 md:mb-0`}>
-                  <div className="flex items-center bg-muted px-4 py-2 rounded-full">
-                    <Calendar size={16} className="mr-2 text-teal" />
-                    <span className="text-sm text-light/70">{service.period}</span>
-                  </div>
-                </div>
-                
                 {/* Content */}
-                <div className={`w-full md:w-1/2 bg-card p-6 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
+                <div className={`w-full bg-card p-8 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:mr-8 md:text-right' : 'md:ml-8'}`}>
                   <div className="flex items-center gap-2 mb-2">
                     <Briefcase size={18} className="text-teal" />
                     <h3 className="text-xl font-bold">{service.title}</h3>
                   </div>
-                  <p className="text-teal mb-3">{service.category}</p>
+                  <p className="text-teal mb-4">{service.category}</p>
                   <ul className={`space-y-2 text-light/80 ${index % 2 === 0 ? 'md:ml-auto' : ''}`}>
                     {service.description.map((item, i) => <li key={i} className="flex items-start gap-2">
                         <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-1.5"></span>
