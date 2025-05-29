@@ -31,39 +31,48 @@ const services: Service[] = [{
 }];
 
 const ExperienceSection = () => {
-  return <section id="experience" className="bg-[#141414] py-0">
+  return (
+    <section id="experience" className="bg-[#141414] py-0">
       <div className="section-padding">
-        <h2 className="section-title">My Service</h2>
+        <h2 className="section-title text-center">My Service</h2>
         
-        <div className="mt-16 relative">
+        <div className="mt-16 relative max-w-6xl mx-auto">
           {/* Timeline Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-muted md:transform md:-translate-x-1/2"></div>
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-muted md:transform md:-translate-x-1/2"></div>
           
           {/* Service Items */}
-          {services.map((service, index) => <Fragment key={index}>
-              <div className={`flex flex-col md:flex-row items-start md:items-center gap-4 mb-16 relative ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+          {services.map((service, index) => (
+            <Fragment key={index}>
+              <div className={`flex flex-col md:flex-row items-start md:items-center gap-6 mb-12 relative ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                 {/* Timeline Node */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 rounded-full bg-teal transform -translate-x-1/2 z-10"></div>
+                <div className="absolute left-4 md:left-1/2 top-6 w-4 h-4 rounded-full bg-teal transform -translate-x-1/2 z-10 border-4 border-[#141414]"></div>
                 
                 {/* Content */}
-                <div className={`w-full bg-card p-8 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:mr-8 md:text-right' : 'md:ml-8'}`}>
-                  <div className="flex items-center gap-2 mb-2">
+                <div className={`w-full md:w-5/12 bg-card p-6 rounded-lg shadow-lg ml-12 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'}`}>
+                  <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
                     <Briefcase size={18} className="text-teal" />
                     <h3 className="text-xl font-bold">{service.title}</h3>
                   </div>
-                  <p className="text-teal mb-4">{service.category}</p>
-                  <ul className={`space-y-2 text-light/80 ${index % 2 === 0 ? 'md:ml-auto' : ''}`}>
-                    {service.description.map((item, i) => <li key={i} className="flex items-start gap-2">
-                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-1.5"></span>
-                        <span>{item}</span>
-                      </li>)}
+                  <p className="text-teal mb-4 font-medium">{service.category}</p>
+                  <ul className={`space-y-2 text-light/80 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                    {service.description.map((item, i) => (
+                      <li key={i} className={`flex items-start gap-2 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-2 flex-shrink-0"></span>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
+                
+                {/* Spacer for alternating layout */}
+                <div className="hidden md:block md:w-5/12"></div>
               </div>
-            </Fragment>)}
+            </Fragment>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default ExperienceSection;
