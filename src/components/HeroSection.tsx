@@ -4,6 +4,13 @@ import { ArrowDown } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center bg-dark relative overflow-hidden">
       {/* Background Elements */}
@@ -40,14 +47,21 @@ const HeroSection = () => {
             A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="bg-teal hover:bg-teal/90 text-black font-medium">
-              <a href="#projects">
-                Explore My Work
-                <ArrowDown className="ml-2 h-4 w-4" />
-              </a>
+            <Button 
+              size="lg" 
+              className="bg-teal hover:bg-teal/90 text-black font-medium"
+              onClick={() => scrollToSection('projects')}
+            >
+              Explore My Work
+              <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-teal text-teal hover:bg-teal/10">
-              <a href="#contact">Get in Touch</a>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-teal text-teal hover:bg-teal/10"
+              onClick={() => scrollToSection('contact')}
+            >
+              Get in Touch
             </Button>
           </div>
         </div>
