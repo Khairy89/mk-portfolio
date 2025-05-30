@@ -39,11 +39,33 @@ const HeroSection = () => {
         
         {/* Content */}
         <div className="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
-          <span className="text-teal mb-2">UI/UX Designer</span>
+          <span 
+            className="text-teal mb-2" 
+            contentEditable="true" 
+            suppressContentEditableWarning={true}
+          >
+            UI/UX Designer
+          </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Hi, I'm <span className="text-teal">Khairy Fauzi</span>
+            <span 
+              contentEditable="true" 
+              suppressContentEditableWarning={true}
+            >
+              Hi, I'm 
+            </span>
+            <span 
+              className="text-teal" 
+              contentEditable="true" 
+              suppressContentEditableWarning={true}
+            >
+              Khairy Fauzi
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-light/80 mb-6 max-w-lg">
+          <p 
+            className="text-xl md:text-2xl text-light/80 mb-6 max-w-lg" 
+            contentEditable="true" 
+            suppressContentEditableWarning={true}
+          >
             A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -52,7 +74,9 @@ const HeroSection = () => {
               className="bg-teal hover:bg-teal/90 text-black font-medium"
               onClick={() => scrollToSection('projects')}
             >
-              Explore My Work
+              <span contentEditable="true" suppressContentEditableWarning={true}>
+                Explore My Work
+              </span>
               <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
             <Button 
@@ -61,7 +85,9 @@ const HeroSection = () => {
               className="border-teal text-teal hover:bg-teal/10"
               onClick={() => scrollToSection('contact')}
             >
-              Get in Touch
+              <span contentEditable="true" suppressContentEditableWarning={true}>
+                Get in Touch
+              </span>
             </Button>
           </div>
         </div>
