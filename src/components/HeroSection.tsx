@@ -25,6 +25,7 @@ const HeroSection = ({
   description = "A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences."
 }: HeroSectionProps) => {
   const scrollToSection = (sectionId: string) => {
+      console.log('Scrolling to:', sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
