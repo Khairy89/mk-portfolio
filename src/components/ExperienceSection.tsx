@@ -1,13 +1,10 @@
-
 import { Fragment } from 'react';
 import { Briefcase } from 'lucide-react';
-
 type Service = {
   title: string;
   category: string;
   description: string[];
 };
-
 const services: Service[] = [{
   title: "Automation Workflow Engineering",
   category: "Process Automation",
@@ -29,10 +26,8 @@ const services: Service[] = [{
   category: "Strategic Consulting",
   description: ["Provided consultation on digital transformation strategies, aligning technical implementation with business goals", "Strategic planning and roadmap development", "Technology assessment and recommendations", "Business-technical alignment consulting"]
 }];
-
 const ExperienceSection = () => {
-  return (
-    <section id="experience" className="bg-[#141414] py-0">
+  return <section id="experience" className="bg-[#141414] py-0">
       <div className="section-padding">
         <h2 className="section-title text-center">My Service</h2>
         
@@ -41,11 +36,10 @@ const ExperienceSection = () => {
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-muted transform -translate-x-1/2"></div>
           
           {/* Service Items */}
-          {services.map((service, index) => (
-            <Fragment key={index}>
+          {services.map((service, index) => <Fragment key={index}>
               <div className={`flex flex-col md:flex-row items-start md:items-center gap-6 mb-8 md:mb-12 relative ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                 {/* Timeline Node - Hidden on mobile */}
-                <div className="hidden md:block absolute left-1/2 top-6 w-4 h-4 rounded-full bg-teal transform -translate-x-1/2 z-10 border-4 border-[#141414]"></div>
+                <div className=""></div>
                 
                 {/* Content */}
                 <div className={`w-full md:w-5/12 bg-card p-4 md:p-6 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'}`}>
@@ -55,24 +49,19 @@ const ExperienceSection = () => {
                   </div>
                   <p className="text-teal mb-3 md:mb-4 font-medium text-sm md:text-base">{service.category}</p>
                   <ul className={`space-y-2 text-light/80 text-sm md:text-base ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                    {service.description.map((item, i) => (
-                      <li key={i} className={`flex items-start gap-2 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                    {service.description.map((item, i) => <li key={i} className={`flex items-start gap-2 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                         <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-2 flex-shrink-0"></span>
                         <span className="leading-relaxed">{item}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
                 
                 {/* Spacer for alternating layout */}
                 <div className="hidden md:block md:w-5/12"></div>
               </div>
-            </Fragment>
-          ))}
+            </Fragment>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ExperienceSection;
