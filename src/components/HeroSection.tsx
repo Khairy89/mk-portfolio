@@ -1,7 +1,6 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -39,17 +38,19 @@ const HeroSection = () => {
         
         {/* Content */}
         <div className="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
-          <span 
+          <div 
             className="text-teal mb-2" 
             contentEditable="true" 
             suppressContentEditableWarning={true}
+            style={{ outline: 'none' }}
           >
             UI/UX Designer
-          </span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span 
               contentEditable="true" 
               suppressContentEditableWarning={true}
+              style={{ outline: 'none' }}
             >
               Hi, I'm 
             </span>
@@ -57,6 +58,7 @@ const HeroSection = () => {
               className="text-teal" 
               contentEditable="true" 
               suppressContentEditableWarning={true}
+              style={{ outline: 'none' }}
             >
               Khairy Fauzi
             </span>
@@ -65,6 +67,7 @@ const HeroSection = () => {
             className="text-xl md:text-2xl text-light/80 mb-6 max-w-lg" 
             contentEditable="true" 
             suppressContentEditableWarning={true}
+            style={{ outline: 'none' }}
           >
             A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
           </p>
@@ -74,7 +77,11 @@ const HeroSection = () => {
               className="bg-teal hover:bg-teal/90 text-black font-medium"
               onClick={() => scrollToSection('projects')}
             >
-              <span contentEditable="true" suppressContentEditableWarning={true}>
+              <span 
+                contentEditable="true" 
+                suppressContentEditableWarning={true}
+                style={{ outline: 'none' }}
+              >
                 Explore My Work
               </span>
               <ArrowDown className="ml-2 h-4 w-4" />
@@ -85,7 +92,11 @@ const HeroSection = () => {
               className="border-teal text-teal hover:bg-teal/10"
               onClick={() => scrollToSection('contact')}
             >
-              <span contentEditable="true" suppressContentEditableWarning={true}>
+              <span 
+                contentEditable="true" 
+                suppressContentEditableWarning={true}
+                style={{ outline: 'none' }}
+              >
                 Get in Touch
               </span>
             </Button>
