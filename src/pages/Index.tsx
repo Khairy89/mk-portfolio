@@ -45,16 +45,7 @@ const Index = () => {
     <>
       <Navbar />
       <main className="overflow-hidden">
-        <HeroSection 
-          primaryButtonText="Explore My Work"
-          primaryButtonTarget="projects"
-          secondaryButtonText="Get in Touch"
-          secondaryButtonTarget="contact"
-          jobTitle="Senior Software Engineer"
-          name="Khairy Fauzi"
-          greeting="Hi, I'm "
-          description="A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences."
-        />
+        <HeroSection />
         <ExperienceSection />
         <ProjectsSection />
         <ToolsSection />
