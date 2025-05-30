@@ -1,7 +1,7 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import HeroButton from '@/components/HeroButton';
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-dark relative overflow-hidden">
+<section id="hero" className="min-h-screen flex items-center bg-dark relative">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-teal blur-3xl"></div>
