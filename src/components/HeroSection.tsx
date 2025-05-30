@@ -18,26 +18,9 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-teal/40 blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-10">
-        {/* Image Container */}
-        <div className="w-full md:w-2/5 flex justify-center md:justify-start order-2 md:order-1 mt-8 md:mt-0">
-          <div className="relative">
-            {/* Khairy's profile image */}
-            <div className="rounded-2xl bg-gradient-to-br from-dark to-muted p-1 shadow-xl">
-              <div className="w-64 h-80 md:w-80 md:h-96 rounded-xl bg-muted overflow-hidden">
-                <img 
-                  src="/lovable-uploads/35615b55-ae83-4b0c-906f-81584f934797.png"
-                  alt="Khairy Fauzi"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full bg-teal/20 blur-2xl z-0"></div>
-          </div>
-        </div>
-        
+      <div className="container mx-auto px-4 md:px-8 flex flex-col items-center text-center gap-10">
         {/* Content */}
-        <div className="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
+        <div className="w-full flex flex-col items-center text-center">
           <div 
             className="text-teal mb-2" 
             contentEditable="true" 
@@ -46,7 +29,7 @@ const HeroSection = () => {
           >
             UI/UX Designer
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span 
               contentEditable="true" 
               suppressContentEditableWarning={true}
@@ -63,13 +46,31 @@ const HeroSection = () => {
               Khairy Fauzi
             </span>
           </h1>
+          
+          {/* Image Container - Now positioned under the title */}
+          <div className="w-full flex justify-center mb-6">
+            <div className="relative">
+              {/* Khairy's profile image */}
+              <div className="rounded-2xl bg-gradient-to-br from-dark to-muted p-1 shadow-xl">
+                <div className="w-64 h-80 md:w-80 md:h-96 rounded-xl bg-muted overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/35615b55-ae83-4b0c-906f-81584f934797.png"
+                    alt="Khairy Fauzi"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full bg-teal/20 blur-2xl z-0"></div>
+            </div>
+          </div>
+          
           <p 
             className="text-xl md:text-2xl text-light/80 mb-6 max-w-lg" 
             contentEditable="true" 
             suppressContentEditableWarning={true}
             style={{ outline: 'none' }}
           >
-            A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
+            A Software Engineer with 7 years of experience crafting automation workflows and intuitive digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
