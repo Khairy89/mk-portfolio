@@ -3,7 +3,27 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  primaryButtonText?: string;
+  primaryButtonTarget?: string;
+  secondaryButtonText?: string;
+  secondaryButtonTarget?: string;
+  jobTitle?: string;
+  name?: string;
+  greeting?: string;
+  description?: string;
+}
+
+const HeroSection = ({
+  primaryButtonText = "Explore My Work",
+  primaryButtonTarget = "projects",
+  secondaryButtonText = "Get in Touch", 
+  secondaryButtonTarget = "contact",
+  jobTitle = "Senior Software Engineer",
+  name = "Khairy Fauzi",
+  greeting = "Hi, I'm ",
+  description = "A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences."
+}: HeroSectionProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -44,21 +64,21 @@ const HeroSection = () => {
             contentEditable="true" 
             suppressContentEditableWarning={true}
           >
-            Senior Software Engineer
+            {jobTitle}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span 
               contentEditable="true" 
               suppressContentEditableWarning={true}
             >
-              Hi, I'm 
+              {greeting}
             </span>
             <span 
               className="text-teal" 
               contentEditable="true" 
               suppressContentEditableWarning={true}
             >
-              Khairy Fauzi
+              {name}
             </span>
           </h1>
           <p 
@@ -66,16 +86,20 @@ const HeroSection = () => {
             contentEditable="true" 
             suppressContentEditableWarning={true}
           >
-            A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
+            {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
               className="bg-teal hover:bg-teal/90 text-black font-medium"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection(primaryButtonTarget)}
             >
-              <span contentEditable="true" suppressContentEditableWarning={true}>
-                Explore My Work
+              <span 
+                contentEditable="true" 
+                suppressContentEditableWarning={true}
+                data-editable-field="primaryButtonText"
+              >
+                {primaryButtonText}
               </span>
               <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
@@ -83,12 +107,34 @@ const HeroSection = () => {
               variant="outline" 
               size="lg" 
               className="border-teal text-teal hover:bg-teal/10"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection(secondaryButtonTarget)}
             >
-              <span contentEditable="true" suppressContentEditableWarning={true}>
-                Get in Touch
+              <span 
+                contentEditable="true" 
+                suppressContentEditableWarning={true}
+                data-editable-field="secondaryButtonText"
+              >
+                {secondaryButtonText}
               </span>
             </Button>
+          </div>
+          
+          {/* Hidden editable fields for button targets */}
+          <div className="hidden">
+            <input 
+              type="text" 
+              value={primaryButtonTarget}
+              onChange={() => {}}
+              data-editable-field="primaryButtonTarget"
+              placeholder="Primary button target section"
+            />
+            <input 
+              type="text" 
+              value={secondaryButtonTarget}
+              onChange={() => {}}
+              data-editable-field="secondaryButtonTarget"
+              placeholder="Secondary button target section"
+            />
           </div>
         </div>
       </div>
