@@ -1,16 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import HeroButton from '@/components/HeroButton';
 
 const HeroSection = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
 <section id="hero" className="min-h-screen flex items-center bg-dark relative">
       {/* Background Elements */}
@@ -68,28 +59,6 @@ const HeroSection = () => {
           >
             A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              size="lg" 
-              className="bg-teal hover:bg-teal/90 text-black font-medium"
-              onClick={() => scrollToSection('projects')}
-            >
-              <span contentEditable="true" suppressContentEditableWarning={true}>
-                Explore My Work
-              </span>
-              <ArrowDown className="ml-2 h-4 w-4" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-teal text-teal hover:bg-teal/10"
-              onClick={() => scrollToSection('contact')}
-            >
-              <span contentEditable="true" suppressContentEditableWarning={true}>
-                Get in Touch
-              </span>
-            </Button>
-          </div>
         </div>
       </div>
     </section>
