@@ -57,7 +57,7 @@ const HeroSection = () => {
             contentEditable="true" 
             suppressContentEditableWarning={true}
           >
-            A UI/UX designer with 3 years of experience crafting intuitive and engaging digital experiences.
+            A Software Engineer with 3 years of experience crafting automation tools and solutions for businesses.
           </p>
         </div>
       </div>
