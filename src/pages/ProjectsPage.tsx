@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -11,6 +10,15 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     document.title = 'All Projects | Khairy Fauzi';
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+    // Ensure body can scroll (fix potential overflow issues)
+    document.body.style.overflow = 'auto';
+    
+    // Cleanup function to ensure scrolling is always enabled when leaving the page
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
   }, []);
 
   const allProjects = [
