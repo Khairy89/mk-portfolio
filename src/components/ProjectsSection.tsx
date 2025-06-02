@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, FileText, X } from 'lucide-react';
+
 type Project = {
   id: number;
   title: string;
@@ -49,6 +51,8 @@ const projects: Project[] = [{
 }];
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const navigate = useNavigate();
+
   const openCaseStudy = (project: Project) => {
     setSelectedProject(project);
     document.body.style.overflow = 'hidden';
@@ -57,7 +61,9 @@ const ProjectsSection = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'auto';
   };
-  return <section id="projects" className="bg-dark py-0">
+
+  return (
+    <section id="projects" className="bg-dark py-0">
       <div className="section-padding">
         {/* Header */}
         <div className="text-center mb-16">
@@ -69,7 +75,12 @@ const ProjectsSection = () => {
         
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map(project => <div key={project.id} className="group relative bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-teal/20" onClick={() => openCaseStudy(project)}>
+          {projects.map(project => (
+            <div 
+              key={project.id} 
+              className="group relative bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-teal/20" 
+              onClick={() => openCaseStudy(project)}
+            >
               {/* Project Image */}
               <div className="relative h-64 overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
@@ -90,19 +101,24 @@ const ProjectsSection = () => {
                   </div>
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
         
         {/* Action Buttons */}
         <div className="text-center mt-12">
-          <Button className="bg-teal hover:bg-teal/90 text-black px-8 py-3 text-lg">
+          <Button 
+            onClick={() => navigate('/projects')}
+            className="bg-teal hover:bg-teal/90 text-black px-8 py-3 text-lg"
+          >
             View All Projects
           </Button>
         </div>
       </div>
       
       {/* Case Study Modal */}
-      {selectedProject && <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeCaseStudy}></div>
           
           <div className="relative bg-card rounded-xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -154,16 +170,26 @@ const ProjectsSection = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8">
+                <div className="mt-8 flex gap-4">
                   <Button className="bg-teal hover:bg-teal/90 text-black">
                     <ExternalLink className="h-4 w-4 mr-2" />
                     View Project Details
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    onClick={() => navigate('/projects')}
+                    className="border-teal text-teal hover:bg-teal hover:text-black"
+                  >
+                    View All Projects
                   </Button>
                 </div>
               </div>
             </div>
           </div>
-        </div>}
-    </section>;
+        </div>
+      )}
+    </section>
+  );
 };
+
 export default ProjectsSection;
