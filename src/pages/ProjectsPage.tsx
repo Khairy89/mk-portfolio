@@ -21,6 +21,17 @@ const ProjectsPage = () => {
     };
   }, []);
 
+  const handleGetInTouch = () => {
+    navigate('/');
+    // Wait for navigation to complete, then scroll to contact section
+    setTimeout(() => {
+      const contactElement = document.querySelector('#contact');
+      if (contactElement) {
+        contactElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   const allProjects = [
     {
       id: 1,
@@ -224,7 +235,7 @@ const ProjectsPage = () => {
               I'm always open to discussing new projects and opportunities
             </p>
             <Button 
-              onClick={() => navigate('/#contact')}
+              onClick={handleGetInTouch}
               className="bg-teal hover:bg-teal/90 text-black px-8 py-3"
             >
               Get In Touch
