@@ -52,7 +52,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to the user
     const userEmailResponse = await resend.emails.send({
-      from: "Khairy Fauzi <noreply@khairyfauzi.dev>",
+      from: "Khairy Fauzi <noreply@nexflow.biz>",
       to: [email],
       subject: "Thank you for contacting me!",
       html: `
@@ -75,7 +75,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to you
     const notificationEmailResponse = await resend.emails.send({
-      from: "Contact Form <noreply@khairyfauzi.dev>",
+      from: "Contact Form <noreply@nexflow.biz>",
       to: ["khairy.fauzi@gmail.com"],
       subject: `New contact form submission: ${subject}`,
       html: `
