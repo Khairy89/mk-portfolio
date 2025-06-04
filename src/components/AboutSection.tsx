@@ -15,11 +15,6 @@ const AboutSection = () => {
             <p className="mb-6 text-light/80">From building seamless n8n workflows to designing clean, responsive websites and generating AI-based video and branding assets—my work is all about making complex ideas feel simple, efficient, and impactful.</p>
             
             <p className="text-light/80">I believe that great digital experiences should be intelligent, frictionless, and future-ready—and I bring that philosophy into every project I take on</p>
-            
-            <Button className="mt-8 bg-teal hover:bg-teal/90 text-black">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
           </div>
           
           {/* Stats & Skills Side */}
@@ -46,18 +41,14 @@ const AboutSection = () => {
             
             {/* Education */}
             <div className="bg-card p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Certification</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold">Certified Artificial Intelligence Practitioner</h4>
-                  <p className="text-teal">CertNexus</p>
-                  <p className="text-sm text-light/70">ID : 2022003911</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Certified Data Science Practitioner</h4>
-                  <p className="text-teal">CertNexus</p>
-                  <p className="text-sm text-light/70">ID : 2022003911</p>
-                </div>
+              <div className="flex gap-4">
+                <Button className="bg-teal hover:bg-teal/90 text-black" onClick={() => window.location.href='/certification'}>
+                  View Certifications
+                </Button>
+                <Button className="bg-teal hover:bg-teal/90 text-black">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </Button>
               </div>
             </div>
           </div>
