@@ -1,13 +1,14 @@
+
 import { useState, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Linkedin, Send, Check } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+
 const ContactSection = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -16,23 +17,28 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-  const handleSubmit = (e: FormEvent) => {
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
       setSubmitted(true);
       toast({
         title: "Message sent!",
@@ -49,9 +55,20 @@ const ContactSection = () => {
 
       // Reset submitted state after some time
       setTimeout(() => setSubmitted(false), 3000);
-    }, 1500);
+    } catch (error: any) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact me directly at khairy.fauzi@gmail.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-  return <section id="contact" className="bg-[#141414] py-0">
+
+  return (
+    <section id="contact" className="bg-[#141414] py-0">
       <div className="section-padding">
         <h2 className="section-title">Get In Touch</h2>
         
@@ -111,32 +128,78 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm mb-1">Name</label>
-                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required className="bg-muted border-muted" />
+                  <Input 
+                    id="name" 
+                    name="name" 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    placeholder="Your name" 
+                    required 
+                    className="bg-muted border-muted" 
+                  />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm mb-1">Email</label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required className="bg-muted border-muted" />
+                  <Input 
+                    id="email" 
+                    name="email" 
+                    type="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    placeholder="Your email address" 
+                    required 
+                    className="bg-muted border-muted" 
+                  />
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm mb-1">Subject</label>
-                  <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="What is this regarding?" required className="bg-muted border-muted" />
+                  <Input 
+                    id="subject" 
+                    name="subject" 
+                    value={formData.subject} 
+                    onChange={handleChange} 
+                    placeholder="What is this regarding?" 
+                    required 
+                    className="bg-muted border-muted" 
+                  />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm mb-1">Message</label>
-                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message" rows={5} required className="bg-muted border-muted resize-none" />
+                  <Textarea 
+                    id="message" 
+                    name="message" 
+                    value={formData.message} 
+                    onChange={handleChange} 
+                    placeholder="Your message" 
+                    rows={5} 
+                    required 
+                    className="bg-muted border-muted resize-none" 
+                  />
                 </div>
                 
-                <Button type="submit" className="w-full bg-teal hover:bg-teal/90 text-black" disabled={isSubmitting || submitted}>
-                  {isSubmitting ? <>Sending...<Send className="ml-2 h-4 w-4 animate-pulse" /></> : submitted ? <>Sent!<Check className="ml-2 h-4 w-4" /></> : <>Send Message<Send className="ml-2 h-4 w-4" /></>}
+                <Button 
+                  type="submit" 
+                  className="w-full bg-teal hover:bg-teal/90 text-black" 
+                  disabled={isSubmitting || submitted}
+                >
+                  {isSubmitting ? (
+                    <>Sending...<Send className="ml-2 h-4 w-4 animate-pulse" /></>
+                  ) : submitted ? (
+                    <>Sent!<Check className="ml-2 h-4 w-4" /></>
+                  ) : (
+                    <>Send Message<Send className="ml-2 h-4 w-4" /></>
+                  )}
                 </Button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ContactSection;
