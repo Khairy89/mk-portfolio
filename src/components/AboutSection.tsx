@@ -12,7 +12,7 @@ const AboutSection = () => {
             
             <p className="mb-6 text-light/80">With 7 years of experience in tech and a growing freelance practice under Nexflow, I help businesses streamline operations, elevate user experiences, and unlock new creative possibilities through automation and artificial intelligence.</p>
             
-            <p className="mb-6 text-light/80">From building seamless n8n workflows to designing clean, responsive websites and generating AI-based video and branding assets—my work is all about making complex ideas feel simple, efficient, and impactful.</p>
+            <p className="mb-6 text-light/80">From building seamless n8n workflows to responsive websites and generating AI-based video and branding assets—my work is all about making complex ideas feel simple, efficient, and impactful.</p>
             
             <p className="text-light/80">I believe that great digital experiences should be intelligent, frictionless, and future-ready—and I bring that philosophy into every project I take on</p>
           </div>
