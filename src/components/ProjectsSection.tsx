@@ -128,12 +128,21 @@ const ProjectsSection = () => {
               <div className="relative h-64 overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <span className="text-teal text-sm font-medium">{project.category}</span>
-                    <h3 className="text-xl font-bold mt-1 mb-2 line-clamp-2">{project.title}</h3>
-                    <p className="text-light/80 text-sm line-clamp-2">{project.description}</p>
+                {/* Overlay with brand background image */}
+                <div className="absolute inset-0">
+                  <img
+                    src="https://nexflow.biz/lovable-uploads/Whisk_a6bb5aa6e7.jpg"
+                    alt="Nexflow Portfolio Brand"
+                    className="absolute inset-0 w-full h-full object-cover opacity-50 blur-sm pointer-events-none select-none"
+                    draggable={false}
+                    aria-hidden="true"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <span className="text-teal text-sm font-medium">{project.category}</span>
+                      <h3 className="text-xl font-bold mt-1 mb-2 line-clamp-2">{project.title}</h3>
+                      <p className="text-light/80 text-sm line-clamp-2">{project.description}</p>
+                    </div>
                   </div>
                 </div>
                 
