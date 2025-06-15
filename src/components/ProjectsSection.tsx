@@ -80,11 +80,11 @@ const projects: Project[] = [
   // UI/UX Design Portfolio (formerly Foodiez)
   {
     id: 3,
-    title: "UXfolio: UI/UX Design Portfolio",
+    title: "Nexflow: UI/UX Design Portfolio",
     category: "UI/UX Design",
     description: "A digital portfolio showcasing my best UI/UX design work with interactive case studies and custom visuals.",
-    image: "https://images.unsplash.com/photo-1503676382389-4809596d5290?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    longDescription: "UXfolio is a personal design portfolio that highlights my strengths in web and mobile UI/UX, detailed design systems, and user-centered prototypes. Includes interactive galleries, project spotlights, and smooth navigation built with the Vibe Coding Method.",
+    image: "/lovable-uploads/Whisk_a6bb5aa6e7.jpg",
+    longDescription: "Nexflow is a personal design portfolio that highlights my strengths in web and mobile UI/UX, detailed design systems, and user-centered prototypes. Includes interactive galleries, project spotlights, and smooth navigation built with the Vibe Coding Method.",
     tools: ["React", "Tailwind CSS", "Figma", "Vibe Coding Method"],
     challenges: "Demonstrating a wide range of blended UI/UX skills and keeping the experience immersive and lightweight.",
     solutions: "Blended dynamic content blocks and motion with a strict focus on accessibility and clarity.",
