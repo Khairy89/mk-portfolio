@@ -34,21 +34,21 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="bg-[#141414] py-0">
       <div className="section-padding">
-        <h2 className="section-title text-center">My Service</h2>
+        <h2 className="section-title text-center text-2xl sm:text-3xl md:text-4xl">My Service</h2>
         
-        <div className="mt-16 max-w-4xl mx-auto space-y-8">
+        <div className="mt-16 max-w-4xl mx-auto space-y-6 sm:space-y-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-card p-6 rounded-lg shadow-lg">
+            <div key={index} className="bg-card p-4 sm:p-6 rounded-lg shadow-lg">
               <div className="flex items-center gap-2 mb-3">
-                <Briefcase size={18} className="text-teal" />
-                <h3 className="text-xl font-bold">{service.title}</h3>
+                <Briefcase size={16} className="text-teal sm:w-5 sm:h-5" />
+                <h3 className="text-lg sm:text-xl font-bold leading-tight">{service.title}</h3>
               </div>
-              <p className="text-teal mb-4 font-medium">{service.category}</p>
+              <p className="text-teal mb-4 font-medium text-sm sm:text-base">{service.category}</p>
               <ul className="space-y-2 text-light/80">
                 {service.description.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal mt-2 flex-shrink-0"></span>
-                    <span className="leading-relaxed">{item}</span>
+                    <span className="leading-relaxed text-sm sm:text-base">{item}</span>
                   </li>
                 ))}
               </ul>
