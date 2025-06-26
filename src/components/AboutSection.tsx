@@ -45,10 +45,12 @@ const AboutSection = () => {
                 <Button className="bg-teal hover:bg-teal/90 text-black" onClick={() => window.location.href='/certification'}>
                   View Certifications
                 </Button>
-                <Button className="bg-teal hover:bg-teal/90 text-black">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
-                </Button>
+                <a href="/lovable-uploads/Resume.pdf" download target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-teal hover:bg-teal/90 text-black">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Resume
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
