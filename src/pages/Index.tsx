@@ -36,9 +36,15 @@ const Index = () => {
     };
   }, []);
   
-  // Update page title
+  // Update page title and meta description for home page
   useEffect(() => {
-    document.title = 'Khairy Fauzi | UI/UX Designer';
+    document.title = 'Khairy Fauzi | Software Engineer & UI/UX Designer Portfolio';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Portfolio of Khairy Fauzi, Senior Software Engineer & UI/UX Designer with 7+ years of experience in automation, CRM solutions, and digital experiences. Specializing in Salesforce, Python, n8n workflows, and modern web development.');
+    }
   }, []);
   
   return (

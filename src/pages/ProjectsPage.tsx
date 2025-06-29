@@ -9,7 +9,25 @@ const ProjectsPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'All Projects | Khairy Fauzi';
+    document.title = 'Software Development Projects | Khairy Fauzi Portfolio';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore Khairy Fauzi\'s complete portfolio of software development projects including Salesforce integrations, automation workflows, web applications, and UI/UX design solutions.');
+    }
+
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Software Development Projects | Khairy Fauzi Portfolio');
+    }
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Explore Khairy Fauzi\'s complete portfolio of software development projects including Salesforce integrations, automation workflows, and web applications.');
+    }
+
     // Scroll to top when page loads
     window.scrollTo(0, 0);
     // Ensure body can scroll (fix potential overflow issues)
