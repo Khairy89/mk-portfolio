@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# Khairy Fauzi Portfolio
 
-## Project info
+A clean and modern personal portfolio website for Khairy Fauzi, Software Engineer & UI/UX Designer. This site showcases professional experience, technical projects, certifications, and contact details in a responsive and well-structured layout.
 
-**URL**: https://lovable.dev/projects/374b5787-4884-4c4e-9cc7-25a2c0a160bc
+## Project Overview
 
-## How can I edit this code?
+This portfolio was built to serve as an online presence for potential clients, recruiters, and collaborators. It highlights both development and design skills, featuring selected projects and credentials in a fast, accessible, and aesthetically polished frontend.
 
-There are several ways of editing your application.
+## Live Demo
 
-**Use Lovable**
+View the live portfolio here:  
+<a href="https://www.nexflow.biz" target="_blank">
+  <strong>![Portfolio Preview](./public/assets/Untitled_design.svg)</strong>
+</a>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/374b5787-4884-4c4e-9cc7-25a2c0a160bc) and start prompting.
+## Technologies Used
 
-Changes made via Lovable will be committed automatically to this repo.
+- Vite  
+- React  
+- TypeScript  
+- Tailwind CSS  
+- shadcn/ui  
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Ensure you have the following installed:
 
-Follow these steps:
+- Node.js (v16+)
+- npm (Node package manager)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Setup Instructions
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/your-portfolio.git
+cd your-portfolio
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+You can deploy this portfolio to any static hosting provider such as:
 
-**Use GitHub Codespaces**
+- Vercel
+- Netlify
+- GitHub Pages
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Just connect your repository and follow the provider’s deployment instructions.
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with:
+```
+khairy-fauzi-portfolio/
+├── public/             # Static assets
+├── src/                # Source code
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page routes (Home, Projects, Contact, etc.)
+│   ├── styles/         # Tailwind or custom styles
+│   ├── integrations/   # API integrations (e.g., Supabase)
+│   └── main.tsx        # App entry point
+├── tailwind.config.js  # Tailwind CSS configuration
+├── vite.config.ts      # Vite configuration
+├── package.json        # Project metadata and dependencies
+└── supabase/           # Supabase backend functions/config
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contact
 
-## How can I deploy this project?
+If you'd like to connect, collaborate, or hire:
 
-Simply open [Lovable](https://lovable.dev/projects/374b5787-4884-4c4e-9cc7-25a2c0a160bc) and click on Share -> Publish.
+- Email: khairy.fauzi@gmail.com
+- Website: https://www.nexflow.biz  
+- LinkedIn: https://linkedin.com/in/khairifauzi
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is open-source and available under the MIT License.

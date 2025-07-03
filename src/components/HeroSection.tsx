@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
@@ -18,7 +17,7 @@ const HeroSection = () => {
             <div className="rounded-2xl bg-gradient-to-br from-dark to-muted p-1 shadow-xl">
               <div className="w-56 h-72 sm:w-64 sm:h-80 md:w-80 md:h-96 rounded-xl bg-muted overflow-hidden">
                 <img 
-                  src="/lovable-uploads/35615b55-ae83-4b0c-906f-81584f934797.png"
+                  src="/assets/35615b55-ae83-4b0c-906f-81584f934797.png"
                   alt="Khairy Fauzi"
                   className="w-full h-full object-cover"
                 />

@@ -83,7 +83,7 @@ const projects: Project[] = [
     title: "Nexflow: UI/UX Design Portfolio",
     category: "UI/UX Design",
     description: "A digital portfolio showcasing my best UI/UX design work with interactive case studies and custom visuals.",
-    image: "/lovable-uploads/Whisk_a6bb5aa6e7.jpg",
+    image: "/assets/Whisk_a6bb5aa6e7.jpg",
     longDescription: "Nexflow is a personal design portfolio that highlights my strengths in web and mobile UI/UX, detailed design systems, and user-centered prototypes. Includes interactive galleries, project spotlights, and smooth navigation built with the Vibe Coding Method.",
     tools: ["React", "Tailwind CSS", "Figma", "Vibe Coding Method"],
     challenges: "Demonstrating a wide range of blended UI/UX skills and keeping the experience immersive and lightweight.",

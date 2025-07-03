@@ -1,4 +1,3 @@
-
 import { Badge } from '@/components/ui/badge';
 import { Calendar, ExternalLink, Award } from 'lucide-react';
 
@@ -9,7 +8,7 @@ const certifications = [
     date: "March 20, 2025",
     validUntil: "March 20, 2028",
     id: "2022003911",
-    image: "/lovable-uploads/ef309c66-9ac1-480d-9234-0de5647af6ec.png",
+    image: "/assets/ef309c66-9ac1-480d-9234-0de5647af6ec.png",
     description: "Professional certification in AI implementation and best practices"
   },
   {
@@ -18,7 +17,7 @@ const certifications = [
     date: "March 26, 2025",
     validUntil: "March 26, 2028",
     id: "2022003911",
-    image: "/lovable-uploads/c2a62bdc-d400-4de3-b652-7b70357792ee.png",
+    image: "/assets/c2a62bdc-d400-4de3-b652-7b70357792ee.png",
     description: "Expert-level certification in data science methodologies and tools"
   },
   {
@@ -27,7 +26,7 @@ const certifications = [
     date: "December 13, 2022",
     validUntil: "Ongoing",
     id: "2783851",
-    image: "/lovable-uploads/dab79146-22c6-40e7-a761-bd9928ce8cd8.png",
+    image: "/assets/dab79146-22c6-40e7-a761-bd9928ce8cd8.png",
     description: "Certified expertise in building custom applications on the Salesforce platform"
   }
 ];
