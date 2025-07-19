@@ -25,7 +25,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full bg-teal/20 blur-2xl z-0"></div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full bg-teal/20 blur-2xl -z-10"></div>
           </div>
         </div>
         
