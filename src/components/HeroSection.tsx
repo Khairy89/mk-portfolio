@@ -62,38 +62,29 @@ const HeroSection = () => {
           </p>
           
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button 
-              asChild
-              size="lg"
-              className="bg-teal hover:bg-teal/90 text-white font-semibold px-6 py-3"
+          <div className="flex flex-col sm:flex-row gap-4 mt-4 relative z-10">
+            <button 
+              onClick={() => window.open('https://www.linkedin.com/in/khairifauzi/', '_blank')}
+              className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 bg-teal hover:bg-teal/90 text-white font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <a 
-                href="https://www.linkedin.com/in/khairifauzi/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Linkedin size={20} />
-                Connect on LinkedIn
-              </a>
-            </Button>
+              <Linkedin size={20} />
+              Connect on LinkedIn
+            </button>
             
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-teal text-teal hover:bg-teal hover:text-white font-semibold px-6 py-3"
+            <button 
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/assets/Resume.pdf';
+                link.download = 'Khairy_Fauzi_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 border border-teal text-teal hover:bg-teal hover:text-white font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <a 
-                href="/assets/Resume.pdf" 
-                download="Khairy_Fauzi_Resume.pdf"
-                className="flex items-center gap-2"
-              >
-                <Download size={20} />
-                Download Resume
-              </a>
-            </Button>
+              <Download size={20} />
+              Download Resume
+            </button>
           </div>
         </div>
       </div>
