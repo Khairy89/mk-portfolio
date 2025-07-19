@@ -69,7 +69,7 @@ const HeroSection = () => {
               className="bg-teal hover:bg-teal/90 text-white font-semibold px-6 py-3"
             >
               <a 
-                href="https://linkedin.com/in/khairyfauzi" 
+                href="https://www.linkedin.com/in/khairifauzi/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
