@@ -1,4 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Linkedin, Download } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -52,12 +54,47 @@ const HeroSection = () => {
             </span>
           </h1>
           <p 
-            className="text-lg sm:text-xl md:text-2xl text-light/80 mb-6 max-w-lg leading-relaxed px-2 sm:px-0" 
+            className="text-lg sm:text-xl md:text-2xl text-light/80 mb-8 max-w-lg leading-relaxed px-2 sm:px-0" 
             contentEditable="true" 
             suppressContentEditableWarning={true}
           >
             A Software Engineer with 7 years of experience crafting automation tools and solutions for businesses.
           </p>
+          
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <Button 
+              asChild
+              size="lg"
+              className="bg-teal hover:bg-teal/90 text-white font-semibold px-6 py-3"
+            >
+              <a 
+                href="https://linkedin.com/in/khairyfauzi" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Linkedin size={20} />
+                Connect on LinkedIn
+              </a>
+            </Button>
+            
+            <Button 
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-teal text-teal hover:bg-teal hover:text-white font-semibold px-6 py-3"
+            >
+              <a 
+                href="/assets/Resume.pdf" 
+                download="Khairy_Fauzi_Resume.pdf"
+                className="flex items-center gap-2"
+              >
+                <Download size={20} />
+                Download Resume
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
